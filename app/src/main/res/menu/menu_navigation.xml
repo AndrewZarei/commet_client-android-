@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item
+            android:id="@+id/conversationsFragment"
+            android:title="Chats" />
+
+        <item
+            android:id="@+id/walletFragment"
+            android:title="Wallet" />
+
+        <item
+            android:id="@+id/settingFragment"
+            android:title="Settings" />
+
+</menu>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+        <variable
+            name="model"
+            type="com.solana.models.buffer.MessageModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right">
+
+            <TextView
+                android:id="@+id/meta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/yekan_bakh_medium"
+                android:padding="@dimen/_10sdp"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:id="@+id/parent_message"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               app:layout_constraintHorizontal_bias="1"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent">
+               <TextView
+                   android:id="@+id/textView4"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:background="@drawable/lbl_massage"
+                   android:fontFamily="@font/yekan_bakh_medium"
+                   android:padding="8dp"
+                   android:layout_margin="8dp"
+                   android:text="@{model.text}"
+                   android:textColor="@color/black"
+                   android:textAlignment="center"
+                   android:textSize="14sp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:id="@+id/parent_img"
+                   android:layout_width="150dp"
+                   android:layout_height="150dp"
+                   android:visibility="visible"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toTopOf="parent">
+
+                   <ProgressBar
+                       android:id="@+id/progress_img"
+                       android:layout_width="30dp"
+                       android:layout_height="30dp"
+                       app:layout_constraintBottom_toBottomOf="@+id/img"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="@+id/img"
+                       app:layout_constraintTop_toTopOf="@+id/img" />
+                   <ProgressBar
+                       android:id="@+id/progress1"
+                       android:layout_width="@dimen/_25sdp"
+                       android:layout_height="@dimen/_25sdp"
+                       android:visibility="invisible"
+                       app:layout_constraintBottom_toBottomOf="@+id/img"
+                       app:layout_constraintEnd_toEndOf="@+id/img"
+                       app:layout_constraintStart_toStartOf="@+id/img"
+                       app:layout_constraintTop_toTopOf="@+id/parent_img" />
+
+                   <ImageView
+                       android:id="@+id/img2"
+                       android:layout_width="50dp"
+                       android:layout_height="50dp"
+                       android:src="@drawable/baseline_cloud_download_24"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="@+id/img"
+                       app:layout_constraintTop_toTopOf="parent" />
+                   <ImageView
+                       android:id="@+id/img"
+                       android:layout_width="150dp"
+                       android:layout_height="150dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintTop_toTopOf="parent"
+                      />
+               </androidx.constraintlayout.widget.ConstraintLayout>
+
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_margin="@dimen/_2sdp"
+                android:src="@{model.seen_by.size()>0 ? @drawable/read : @drawable/unread}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/parent_message" />
+
+            <ImageView
+                android:id="@+id/imageView_p"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_margin="@dimen/_2sdp"
+                android:src="@drawable/baseline_access_time_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:visibility="invisible"
+                app:layout_constraintTop_toBottomOf="@+id/parent_message" />
+
+            <ImageView
+                android:id="@+id/imageView_n"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_margin="@dimen/_2sdp"
+                android:visibility="invisible"
+                android:src="@drawable/baseline_done_all_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/parent_message" />
+
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:fontFamily="@font/yekan_bakh_medium"
+                android:text="@{model.time}"
+                app:layout_constraintEnd_toStartOf="@+id/imageView"
+                app:layout_constraintTop_toBottomOf="@+id/parent_message" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

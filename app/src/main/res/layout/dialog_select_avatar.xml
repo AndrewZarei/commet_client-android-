@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:columnCount="3"
+        android:rowCount="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/user1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/user_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/tick_1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="#fff"
+                android:src="@drawable/done"
+                app:layout_constraintBottom_toBottomOf="@+id/user1"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/user2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/user_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/tick_2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="#fff"
+                android:src="@drawable/done"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/user2"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/user3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/user_3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/tick_3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="#fff"
+                android:src="@drawable/done"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/user3"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/user4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/user_4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/tick_4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="#fff"
+                android:src="@drawable/done"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/user4"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/user5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/user_5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/tick_5"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="#fff"
+                android:src="@drawable/done"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/user5"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/user6"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/user_6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/tick_6"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="#fff"
+                android:src="@drawable/done"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/user6"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

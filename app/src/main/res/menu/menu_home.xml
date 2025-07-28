@@ -1,0 +1,48 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <group android:id="@+id/grp1" android:checkableBehavior="single" >
+        <item
+            android:id="@+id/contacts"
+            android:icon="@drawable/notebook_of_contacts"
+            android:title="contact"
+            />
+
+    </group>
+    <group android:id="@+id/grp21" android:checkableBehavior="single" >
+        <item
+            android:id="@+id/add_group"
+            android:icon="@drawable/contacts"
+            android:title="group"
+            />
+
+    </group>
+
+    <group android:id="@+id/grp12" android:checkableBehavior="single" >
+
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/profile"
+            android:title="profile"
+            />
+    </group>
+
+    <group android:id="@+id/dscww" android:checkableBehavior="single" >
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/logout"
+            android:title="loguot"
+            />
+
+    </group>
+
+    <group android:id="@+id/ascad" android:checkableBehavior="single" >
+        <item
+            android:id="@+id/logs"
+            android:icon="@drawable/bug"
+            android:title="logs"
+            />
+    </group>
+
+</menu>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/conversationsFragment">
+
+
+    <action
+        android:id="@+id/action_conversationsFragment_to_contactsFragment"
+        app:destination="@id/contactsFragment"
+        app:enterAnim="@anim/fragment_open_enter"
+        app:exitAnim="@anim/fragment_close_exit"
+        app:popEnterAnim="@anim/fragment_open_enter"
+        app:popExitAnim="@anim/fragment_close_exit" />
+    <action
+        android:id="@+id/action_conversationsFragment_to_showLogs"
+        app:destination="@id/show_logFragment" />
+    <fragment
+        android:id="@+id/detail_conversation"
+        android:name="com.blockchain.commet.view.fragment.conversationInfo.DetailConversationFragment"
+        android:label="detailConversationFragment"
+        tools:layout="@layout/fragment_detail_conversation">
+        <action
+            android:id="@+id/action_detail_conversation_to_conversationsFragment"
+            app:destination="@id/conversationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/show_logFragment"
+        android:name="com.blockchain.commet.view.fragment.logs.ShowLogs"
+        android:label="showLogs"
+        tools:layout="@layout/showlogs" />
+    <fragment
+        android:id="@+id/conversationFragment"
+        android:name="com.blockchain.commet.view.fragment.conversation.ConversationFragment"
+        android:label="conversationFragment"
+        tools:layout="@layout/conversation_fragment">
+        <argument
+            android:name="id"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="userID"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="userName"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="startChat"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <argument
+            android:name="isChat"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <argument
+            android:name="name"
+            android:defaultValue="false"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_conversationFragment_self"
+            app:destination="@id/conversationFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+        <action
+            android:id="@+id/action_conversationFragment_to_conversationsFragment"
+            app:destination="@id/conversationsFragment" />
+        <action
+            android:id="@+id/action_conversationFragment_to"
+            app:destination="@id/conversationFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+        <action
+            android:id="@+id/action_conversationsFragment_to_detail_conversation"
+            app:destination="@id/detail_conversation" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="com.blockchain.commet.view.fragment.contact.ContactsFragment"
+        android:label="contactFragment"
+        tools:layout="@layout/contacts_fragment"/>
+    <fragment
+        android:id="@+id/conversationsFragment"
+        android:name="com.blockchain.commet.view.fragment.conversations.ConversationsFragment"
+        android:label="chatFragment"
+        tools:layout="@layout/conversations_fragment" />
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.blockchain.commet.view.fragment.wallet.WalletFragment"
+        android:label="walletFragment"
+        tools:layout="@layout/fragment_wallet" />
+    <fragment
+        android:id="@+id/solTransferFragment"
+        android:name="com.blockchain.commet.view.fragment.transfer.SolTransferFragment"
+        android:label="solTransferFragment"
+        tools:layout="@layout/fragment_sol_transfer" />
+    <fragment
+        android:id="@+id/withdrawFragment"
+        android:name="com.blockchain.commet.view.fragment.withdraw.WithdrawFragment"
+        android:label="withdrawFragment"
+        tools:layout="@layout/fragment_withdraw" />
+    <fragment
+        android:id="@+id/depositFragment"
+        android:name="com.blockchain.commet.view.fragment.deposit.DepositFragment"
+        android:label="depositFragment"
+        tools:layout="@layout/fragment_deposit" />
+    <fragment
+        android:id="@+id/transactionFragment"
+        android:name="com.blockchain.commet.view.fragment.transaction.TransactionFragment"
+        android:label="transactionFragment"
+        tools:layout="@layout/fragment_detail_transaction" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.blockchain.commet.view.fragment.profile.ProfileFragment"
+        android:label="settingFragment"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/qrcodeFragment"
+        android:name="com.blockchain.commet.view.fragment.qrcode.QRcodeFragment"
+        android:label="QRcodeFragment"
+        tools:layout="@layout/fragment_qrcode" />
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.blockchain.commet.view.fragment.account.AccountFragment"
+        android:label="AccountFragment"
+        tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/languageFragment"
+        android:name="com.blockchain.commet.view.fragment.contactBook.ContactBookFragment"
+        android:label="LanguageFragment"
+        tools:layout="@layout/fragment_language" />
+
+</navigation>

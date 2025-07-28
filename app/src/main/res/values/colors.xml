@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#00c4b4</color>
+    <color name="purple_700">#038786</color>
+    <color name="teal_200">#70efde</color>
+    <color name="teal_700">#c8fff4</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blackText">#2B2B2B</color>
+    <color name="grey">#787878</color>
+    <!--    <color name="toolbar">#DADADA</color>-->
+    <color name="orange">#ef8956</color>
+    <color name="splashStatus">#2D0A57</color>
+    <color name="landing_text_color">#192d58</color>
+    <color name="oxygen_grey">#d8d8d8</color>
+    <color name="colorPrimary_new">#9F85EC</color>
+    <color name="colorPrimary_old">#0382b6</color>
+    <color name="colorPrimaryVariant">#005E85</color>
+    <color name="textViewColorGray">#757575</color>
+    <color name="textViewColorGray2">#08FFFFFF</color>
+    <color name="disabled">#373737</color>
+    <color name="disable_border">#DFDFDF</color>
+    <color name="disable2">#F6F9FD</color>
+    <color name="enabled">#E2E2E2</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="nav_text">#7A7A7A</color>
+    <color name="grey_black">#616161</color>
+    <color name="blue">#083EBC</color>
+    <color name="action_color">#48ab8e</color>
+
+    <color name="my_statusbar_color">#5ad384</color>
+
+
+
+
+
+   <!-- New Design Color -->
+
+    <color name="colorPrimary">#9041ea</color>
+    <color name="colorPrimaryDark">#7901e5</color>
+    <color name="colorPrimaryLight">#a568ee</color>
+    <color name="primary_200">#bf96f2</color>
+    <color name="primary_100">#d9c1f7</color>
+    <color name="primary_50">#f1e6fc</color>
+
+    <color name="colorAccent">#9cea42</color>
+    <color name="colorAccentDark">#87e500</color>
+    <color name="colorAccentDark2">#72C101</color>
+    <color name="colorAccentLight">#b1ef6c</color>
+    <color name="Accent_200">#caf49a</color>
+    <color name="Accent_100">#e0f8c3</color>
+    <color name="Accent_50">#f3fde7</color>
+
+    <color name="Withdraw">#F43733</color>
+    <color name="Deposit">#87E500</color>
+
+    <color name="Grey_99">#F2F2F2</color>
+    <color name="Grey_90">#D1D1D1</color>
+    <color name="Grey_80">#BDBDBD</color>
+    <color name="Grey_70">#A8A8A8</color>
+    <color name="Grey_60">#959595</color>
+    <color name="Grey_50">#7A7A7A</color>
+    <color name="Grey_40">#626262</color>
+    <color name="Grey_30">#4F4F4F</color>
+    <color name="Grey_20">#3D3D3D</color>
+    <color name="Grey_10">#2B2B2B</color>
+
+</resources>

@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item
+            android:id="@+id/address"
+            android:title="Copy Address"
+            android:orderInCategory="100"/>
+
+</menu>

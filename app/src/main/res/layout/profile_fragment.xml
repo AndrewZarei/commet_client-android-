@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F7FFFD"
+        android:orientation="vertical">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/ref"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="-118dp"
+            tools:layout_editor_absoluteY="105dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/appBarLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/colorPrimary"
+                        android:minHeight="?attr/actionBarSize"
+                        android:theme="?attr/actionBarTheme"
+                        app:contentInsetLeft="0dp"
+                        app:contentInsetStart="0dp"
+                        tools:layout_editor_absoluteX="0dp"
+                        tools:layout_editor_absoluteY="0dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gradient_bg">
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_12sdp"
+                                android:fontFamily="@font/yekan_bakh_medium"
+                                android:gravity="center_vertical"
+                                android:minHeight="?attr/actionBarSize"
+                                android:padding="10dp"
+                                android:text="Profile"
+                                android:textColor="#fff"
+                                android:textIsSelectable="true"
+                                android:textSize="20sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+<!--                            <ImageView-->
+<!--                                android:id="@+id/profile_last_activity"-->
+<!--                                android:layout_width="@dimen/_20sdp"-->
+<!--                                android:layout_height="@dimen/_20sdp"-->
+<!--                                android:layout_marginRight="16dp"-->
+<!--                                android:src="@drawable/history"-->
+<!--                                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                app:layout_constraintTop_toTopOf="parent" />-->
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.appcompat.widget.Toolbar>
+
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+                    <ImageView
+                        android:id="@+id/image_profile"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:padding="@dimen/_8sdp"
+                        android:src="@drawable/profile"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/textView11"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_margin="6dp"-->
+                    <!--                        android:gravity="center"-->
+                    <!--                        android:padding="10dp"-->
+                    <!--                        android:text="Private Key : "-->
+                    <!--                        android:textStyle="bold"-->
+                    <!--                        android:textIsSelectable="true"-->
+                    <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                    <!--                        app:layout_constraintHorizontal_bias="0"-->
+                    <!--                        app:layout_constraintTop_toBottomOf="@+id/image_profile" />-->
+
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:id="@+id/linearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:paddingStart="100dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/image_profile" />
+
+
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/ids"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="60dp"-->
+                    <!--                        android:gravity="left"-->
+                    <!--                        android:lines="4"-->
+                    <!--                        android:maxLines="4"-->
+                    <!--                        android:layout_marginTop="@dimen/_10sdp"-->
+                    <!--                        android:paddingLeft="@dimen/_95sdp"-->
+                    <!--                        android:paddingRight="@dimen/_10sdp"-->
+                    <!--                        android:text="sdfasdfafd fafafadfvas asdcdscacdcdscadscacdasdsada dsavcvzcvvzavvsdvav"-->
+                    <!--                        android:textIsSelectable="true"-->
+                    <!--                        app:layout_constraintTop_toTopOf="@+id/textView11"-->
+                    <!--                        app:layout_constraintRight_toRightOf="parent"/>-->
+
+
+                    <!--                <com.google.android.material.divider.MaterialDivider-->
+                    <!--                    android:id="@+id/linearLayout2"-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:paddingStart="100dp"-->
+                    <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                    app:layout_constraintTop_toBottomOf="@+id/username" />-->
+
+                    <!--                <com.google.android.material.divider.MaterialDivider-->
+                    <!--                    android:id="@+id/linearLayout3"-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:paddingStart="100dp"-->
+                    <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                    app:layout_constraintTop_toBottomOf="@+id/userBalance" />-->
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:text="UserName : "
+                        android:textIsSelectable="true"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/image_profile"
+                        app:layout_constraintStart_toEndOf="@+id/image_profile"
+                        app:layout_constraintTop_toTopOf="@+id/image_profile"
+                        app:layout_constraintVertical_bias="0.3" />
+
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:padding="5dp"
+                        android:text="@string/username"
+                        android:textIsSelectable="true"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView9"
+                        app:layout_constraintStart_toEndOf="@+id/textView9"
+                        app:layout_constraintTop_toTopOf="@+id/textView9"
+                        app:layout_constraintVertical_bias="0.232" />
+
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:text="Balance : "
+                        android:textIsSelectable="true"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/image_profile"
+                        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+                    <TextView
+                        android:id="@+id/userBalance"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:padding="5dp"
+                        android:text="user_balance"
+                        android:textIsSelectable="true"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView10"
+                        app:layout_constraintStart_toEndOf="@+id/textView10" />
+
+                    <ProgressBar
+                        android:id="@+id/progress"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toTopOf="@+id/show_private"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/show_public_key" />
+
+                    <ImageView
+                        android:id="@+id/img_QR"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="16dp"
+                        android:contentDescription="TODO"
+                        app:layout_constraintBottom_toTopOf="@+id/show_private"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                        app:layout_constraintVertical_bias="0" />
+
+                    <com.uzairiqbal.circulartimerview.CircularTimerView
+                        android:id="@+id/circular"
+                        android:layout_width="125dp"
+                        android:layout_height="112dp"
+                        android:visibility="gone"
+                        app:backgroundColor="#787878"
+                        app:backgroundWidth="8"
+                        app:isClockwise="true"
+                        app:layout_constraintBottom_toBottomOf="@+id/progress"
+                        app:layout_constraintEnd_toEndOf="@+id/progress"
+                        app:layout_constraintStart_toStartOf="@+id/progress"
+                        app:layout_constraintTop_toTopOf="@+id/progress"
+                        app:maxValue="15"
+                        app:prefix=""
+                        app:progressBackgroundColor="#C8C7C7"
+                        app:progressColor="#D36969"
+                        app:progressText="waiting"
+                        app:progressTextColor="#eee"
+                        app:startingPoint="bottom"
+                        app:suffix=""
+                        app:textSize="15sp"
+                        tools:ignore="MissingConstraints" />
+
+                    <Button
+                        android:id="@+id/show_private"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:fontFamily="@font/yekan_bakh_medium"
+                        android:gravity="center"
+                        android:text="EXPORT"
+                        android:layout_marginBottom="0dp"
+                        app:backgroundTint="@color/action_color"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1" />
+
+
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="8dp"
+                        android:background="#E6E6E6"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txt_copy_key" />
+
+
+                    <TextView
+                        android:id="@+id/LastActivity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:gravity="end"
+                        android:padding="5dp"
+                        android:text="Last Activity"
+                        app:layout_constraintTop_toBottomOf="@+id/divider"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/last_activity_rec"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        app:layout_constraintBottom_toTopOf="@+id/show_private"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/LastActivity"
+                        tools:listitem="@layout/last_activity" />
+
+
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/show_phrase"-->
+                    <!--                        android:layout_width="0dp"-->
+                    <!--                        android:layout_height="80dp"-->
+                    <!--                        android:background="@color/white"-->
+                    <!--                        android:gravity="center"-->
+                    <!--                        android:hint="@string/enter_your_12_phrase"-->
+                    <!--                        android:padding="20dp"-->
+                    <!--                        android:text=""-->
+                    <!--                        android:visibility="gone"-->
+                    <!--                        android:textColor="@color/black"-->
+                    <!--                        app:layout_constraintBottom_toTopOf="@+id/show_private"-->
+                    <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                        android:layout_marginTop="10dp"-->
+                    <!--                        app:layout_constraintStart_toStartOf="parent" />-->
+
+                    <TextView
+                        android:id="@+id/show_public_key"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="32dp"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/img_QR" />
+
+                    <TextView
+                        android:id="@+id/txt_copy_key"
+                        style="@style/Ripple"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/yekan_bakh_medium"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="Copy"
+                        android:textColor="@color/grey_black"
+                        android:textDirection="rtl"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        app:drawableEndCompat="@drawable/ic_copy"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/show_public_key"
+                        app:layout_constraintTop_toBottomOf="@+id/show_public_key"
+                        app:layout_constraintVertical_bias="0.0" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+</layout>

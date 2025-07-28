@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.blockchain.commet.view.fragment.login.LoginFragment"
+        android:label="loginFragment"
+        tools:layout="@layout/login_frag" >
+        <action
+            android:id="@+id/action_loginFragment_to_passcodeFragment"
+            app:destination="@id/passcodeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true">
+        </action>
+        <action
+            android:id="@+id/action_loginFragment_to_showPrivateKeyFragment"
+            app:destination="@id/showPrivateKeyFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_checkPrivateKeyFragment"
+            app:destination="@id/checkPrivateKeyFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/showPrivateKeyFragment"
+        android:name="com.blockchain.commet.view.fragment.showPrivateKey.ShowPrivateKeyFragment"
+        android:label="ShowPrivateKeyFragment"
+        tools:layout="@layout/showprivatekey_fragment">
+        <action
+            android:id="@+id/action_showPrivateKeyFragment_to_passcodeFragment"
+            app:destination="@id/passcodeFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/showPrivateKeyFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkPrivateKeyFragment"
+        android:name="com.blockchain.commet.view.fragment.checkPrivateKey.CheckPrivateKeyFragment"
+        android:label="CheckPrivateKeyFragment"
+        tools:layout="@layout/checkprivatekey_fragment">
+        <action
+            android:id="@+id/action_checkPrivateKeyFragment_to_passcodeFragment"
+            app:destination="@id/passcodeFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/checkPrivateKeyFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/passcodeFragment"
+        android:name="com.blockchain.commet.view.fragment.passcode.PasscodeFragment"
+        android:label="passcodeFragment"
+        tools:layout="@layout/fragment_passcode">
+    </fragment>
+
+</navigation>
